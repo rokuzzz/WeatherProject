@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundpng"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/weatherData"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="130sp"
+        android:textStyle="bold|italic"
+        app:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayVerdict" />
+
+    <TextView
+        android:id="@+id/dayVerdict"
+        android:layout_width="wrap_content"
+        android:layout_height="61dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/dayVerdict"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:fontFamily="casual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savedprefsSpinner" />
+
+    <TextView
+        android:id="@+id/weatherRep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="[Description]"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperature" />
+
+    <Button
+        android:id="@+id/listButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/listbutton2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/userButton"
+        app:layout_constraintStart_toEndOf="@+id/userButton" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/updatebutton2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/listButton"
+        app:layout_constraintStart_toEndOf="@+id/listButton" />
+
+    <Button
+        android:id="@+id/userButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/settingsbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/savedprefsSpinner"
+        android:layout_width="329dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
